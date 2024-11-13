@@ -4,20 +4,17 @@
 
 def read_all_file():
     with open("test_file", "r") as test_file:
-        tempr_list = []
         for line in test_file:
-            split_contents = tempr_list.append(line.strip().split())
-            print(split_contents)
+            split_contents = line.strip().split()
             try:
+                print(split_contents)
                 x = float(split_contents[0])
                 y = float(split_contents[1])
-                sum = x + y
-                print(sum)
-                return sum
+                total_sum = x + y
+                print(total_sum)
+                return total_sum
 
             except ValueError:
                 print("Error - an inputted value could not be processed.")
-
-
 
 read_all_file()
