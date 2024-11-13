@@ -5,7 +5,12 @@ import sys
 
 
 def read_all_file():
-    command_line_input = sys.argv[1]
+    try:
+        command_line_input = sys.argv[1]
+    except IndexError:
+        print("Could not access the file provided.")
+        sys.exit(1)
+
     with open(command_line_input, "r") as test_file:
         tempr_list = []
         for line in test_file:
