@@ -4,8 +4,10 @@
 
 def read_all_file():
     with open("test_file", "r") as test_file:
+        tempr_list = []
         for line in test_file:
-            contents =
-            print(line)
+            tempr_list.append(line.strip())
+        print(tempr_list)
+
 
 read_all_file()
